@@ -3,8 +3,16 @@
 import { ImageResponse } from "next/og";
 import { allPosts } from "content-collections";
 import { DATA } from "@/data/resume";
+import { readFile } from "fs/promises";
+import path from "path";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
+
+export function generateStaticParams() {
+    return allPosts.map((post) => ({
+        slug: post._meta.path.replace(/\.mdx$/, ""),
+    }));
+}
 
 export const alt = "Blog Post";
 export const size = {
@@ -16,20 +24,24 @@ export const contentType = "image/png";
 const getFontData = async () => {
     try {
         const [cabinetGrotesk, clashDisplay] = await Promise.all([
-            fetch(
-                new URL(
-                    "../../../../public/fonts/CabinetGrotesk-Medium.ttf",
-                    import.meta.url
-                )
-            ).then((res) => res.arrayBuffer()),
-            fetch(
-                new URL(
-                    "../../../../public/fonts/ClashDisplay-Semibold.ttf",
-                    import.meta.url
-                )
-            ).then((res) => res.arrayBuffer()),
+            readFile(
+                path.join(process.cwd(), "public/fonts/CabinetGrotesk-Medium.ttf")
+            ),
+            readFile(
+                path.join(process.cwd(), "public/fonts/ClashDisplay-Semibold.ttf")
+            ),
         ]);
-        return { cabinetGrotesk, clashDisplay };
+
+        return {
+            cabinetGrotesk: cabinetGrotesk.buffer.slice(
+                cabinetGrotesk.byteOffset,
+                cabinetGrotesk.byteOffset + cabinetGrotesk.byteLength
+            ),
+            clashDisplay: clashDisplay.buffer.slice(
+                clashDisplay.byteOffset,
+                clashDisplay.byteOffset + clashDisplay.byteLength
+            ),
+        };
     } catch (error) {
         console.error("Failed to load fonts:", error);
         return null;
@@ -140,11 +152,7 @@ export default async function Image({
                     <div style={styles.outerWrapper}>
                         <div style={styles.middleWrapper}>
                             <div style={styles.wrapper}>
-                                {imageUrl && (
-                                    <div style={styles.imageSection}>
-                                        <img src={imageUrl} alt="Blog Post" style={styles.image} />
-                                    </div>
-                                )}
+                                
                                 <div style={styles.mainContainer}>
                                     <div style={styles.title}>Post Not Found</div>
                                 </div>
@@ -184,11 +192,7 @@ export default async function Image({
                 <div style={styles.outerWrapper}>
                     <div style={styles.middleWrapper}>
                         <div style={styles.wrapper}>
-                            {imageUrl && (
-                                <div style={styles.imageSection}>
-                                    <img src={imageUrl} alt={title} style={styles.image} />
-                                </div>
-                            )}
+                            
                             <div style={styles.mainContainer}>
                                 <div style={styles.title}>{title}</div>
                                 {description && (

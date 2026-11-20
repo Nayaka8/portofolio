@@ -2,6 +2,7 @@
 import { ImageResponse } from "next/og";
 import { DATA } from "@/data/resume";
 
+
 export const runtime = "edge";
 
 export const alt = "Blog";
@@ -119,11 +120,7 @@ export default async function Image() {
                 <div style={styles.outerWrapper}>
                     <div style={styles.middleWrapper}>
                         <div style={styles.wrapper}>
-                            {imageUrl && (
-                                <div style={styles.imageSection}>
-                                    <img src={imageUrl} alt="Blog" style={styles.image} />
-                                </div>
-                            )}
+                           
                             <div style={styles.mainContainer}>
                                 <div style={styles.title}>{title}</div>
                                 {description && (
