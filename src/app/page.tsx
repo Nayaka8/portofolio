@@ -24,7 +24,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+                text={`Hi, I'm ${DATA.name}`}
               />
               <BlurFadeText
                 className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
@@ -52,16 +52,6 @@ export default function Page() {
                 {DATA.summary}
               </Markdown>
             </div>
-          </BlurFade>
-        </div>
-      </section>
-      <section id="work">
-        <div className="flex min-h-0 flex-col gap-y-6">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Work Experience</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 6}>
-            <WorkSection />
           </BlurFade>
         </div>
       </section>
@@ -113,6 +103,59 @@ export default function Page() {
           </div>
         </div>
       </section>
+      <section id="work">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 5}>
+            <h2 className="text-xl font-bold">Work Experience</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 6}>
+            <WorkSection />
+          </BlurFade>
+        </div>
+      </section>
+      <section id="scholarship">
+        <div className="flex min-h-0 flex-col gap-y-6">
+          <BlurFade delay={BLUR_FADE_DELAY * 7}>
+            <h2 className="text-xl font-bold">Scholarship</h2>
+          </BlurFade>
+          <div className="flex flex-col gap-8">
+            {DATA.scholarship.map((scholarship, index) => (
+              <BlurFade
+                key={scholarship.name}
+                delay={BLUR_FADE_DELAY * 8 + index * 0.05}
+              >
+                <Link
+                  href={scholarship.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-x-3 justify-between group"
+                >
+                  <div className="flex items-center gap-x-3 flex-1 min-w-0">
+                    {scholarship.logoUrl ? (
+                      <img
+                        src={scholarship.logoUrl}
+                        className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border overflow-hidden object-contain flex-none"
+                      />
+                    ) : (
+                      <div className="size-8 md:size-10 p-1 border rounded-full shadow ring-2 ring-border bg-muted flex-none" />
+                    )}
+                    <div className="flex-1 min-w-0 flex flex-col gap-0.5">
+                      <div className="font-sans text-sm text-muted-foreground">
+                        {scholarship.name}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1 text-xs tabular-nums text-muted-foreground text-right flex-none">
+                    <span>
+                      {scholarship.start} - {scholarship.end}
+                    </span>
+                  </div>
+                </Link>
+              </BlurFade>
+            ))}
+          </div>
+        </div>
+      </section>
       <section id="skills">
         <div className="flex min-h-0 flex-col gap-y-4">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
@@ -133,11 +176,6 @@ export default function Page() {
       <section id="projects">
         <BlurFade delay={BLUR_FADE_DELAY * 11}>
           <ProjectsSection />
-        </BlurFade>
-      </section>
-      <section id="hackathons">
-        <BlurFade delay={BLUR_FADE_DELAY * 13}>
-          <HackathonsSection />
         </BlurFade>
       </section>
       <section id="contact">

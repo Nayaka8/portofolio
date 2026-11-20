@@ -5,70 +5,54 @@ import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
+import { Flutter } from "@/components/ui/svgs/flutter";
+import { Laravel } from "@/components/ui/svgs/laravel";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
 import { Kubernetes } from "@/components/ui/svgs/kubernetes";
 import { Java } from "@/components/ui/svgs/java";
 import { Csharp } from "@/components/ui/svgs/csharp";
+import { Golang } from "@/components/ui/svgs/golang";
 
 export const DATA = {
-  name: "Dillion Verma",
+  name: "Muhammad Nayaka Putra",
   initials: "DV",
   url: "https://dillion.io",
   location: "San Francisco, CA",
   locationLink: "https://www.google.com/maps/place/sanfrancisco",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Full-Stack Web Developer skilled in Laravel, MySQL, and Flutter. Passionate about building web platforms, data dashboards, and technical instruction.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/me.png",
+    "Information Technology Graduate from Universitas Sumatera Utara with full-time experience in Web Development and Data Analytics. Skilled in PHP, Laravel, MySQL, and Flutter with a proven background in building customer-facing web platforms and developing interactive data dashboards. Strong communicator with leadership experience in technical instruction and organization management.",
+  avatarUrl: "/me.jpg",
   skills: [
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
     { name: "Node.js", icon: Nodejs },
     { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
-    { name: "Postgres", icon: Postgresql },
-    { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
+    { name: "Flutter", icon: Flutter },
+    { name: "Laravel", icon: Laravel },
     { name: "Java", icon: Java },
     { name: "C++", icon: Csharp },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "nayakaputra773@gmail.com",
+    tel: "082276539909",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/Nayaka8",
         icon: Icons.github,
         navbar: true,
       },
-
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://www.linkedin.com/in/muhammad-nayaka-putra-68419128b/",
         icon: Icons.linkedin,
 
-        navbar: true,
-      },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
         navbar: true,
       },
       email: {
@@ -83,234 +67,208 @@ export const DATA = {
 
   work: [
     {
-      company: "Atomic Finance",
+      company: "Telkomsel",
       href: "https://atomic.finance",
       badges: [],
-      location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      location: "Medan, North Sumatera",
+      title: "Web Developer",
+      logoUrl: "/telkomsel.png",
+      start: "January 2025",
+      end: "February 2025",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Designed and developed an interactive data visualization dashboard using the Laravel framework to display and manage user-related metrics. The dashboard improved data accessibility and provided actionable insights for internal teams, contributing to better decision- making processes.",
     },
     {
-      company: "Shopify",
+      company: "Kementerian Keuangan",
       badges: [],
-      href: "https://shopify.com",
-      location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      href: "https://www.kemenkeu.go.id/home",
+      location: "Medan, North Sumatera",
+      title: "Administrative & Data Dashboard",
+      logoUrl: "/kemenkeu.png",
+      start: "June 2025",
+      end: "August 2025",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Supported the administrative team by managing documentation, organizing internal reports, and assisting routine office tasks. Contributed to data analysis efforts by creating interactive dashboards in Power BI, enabling more efficient monitoring of financial indicators.",
     },
     {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
+      company: "CV. Global Solusindo",
+      href: "https://www.cv-globalsolusindo.com/",
       badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
+      location: "Medan, North Sumatera",
+      title: "Web Developer",
+      logoUrl: "/global.jpg",
+      start: "June 2026",
+      end: "July 2026",
       description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
+        "Developed and built customer-facing web applications and service provider platforms from scratch using PHP, the Laravel framework, and MySQL.",
     },
   ],
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
-      end: "2024",
+      school: "Universitas Sumatera Utara",
+      href: "https://www.usu.ac.id/id",
+      degree: "S1 - Information Technology",
+      logoUrl: "/Logo.webp",
+      start: "2022",
+      end: "2026",
     },
+    
+  ],
+  scholarship: [
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
+      href: "https://www.generasibaruindonesia.com/",
+      name: "GenBI Scholarship",
+      logoUrl: "/genbi.jpg",
+      start: "August 2025",
+      end: "April 2026",
     },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
-    },
+    
   ],
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Liloo Office Supplies Online Shop",
+      href: "",
+      dates: "",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "Developed an online shop website for an office supplies store named Liloo, enabling customers to conveniently purchase items directly from the Liloo store through the website. The website includes a purchasing feature for customers, while the admin side offers tools for managing products and tracking sales revenue.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
+        "Laravel",
+        "JavaScript",
+        "MySQL",
+        "PHP",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://chatcollect.com",
+          href: "",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/liloo.png",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
+        "",
     },
     {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
+      title: "Anisa Steak Website",
+      href: "",
+      dates: "",
       active: true,
       description:
-        "Designed, developed and sold animated UI components for developers.",
+        "Developed a food ordering website for Anisa Steak to support various user roles, including cashier, kitchen, and admin. The system enables cashiers to process orders efficiently, the kitchen to view and manage orders in real time, and the admin to access sales reports and manage users.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
+       "Laravel",
+        "JavaScript",
+        "MySQL",
+        "PHP",
         "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
       ],
       links: [
         {
           type: "Website",
-          href: "https://magicui.design",
+          href: "",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      image: "/anisa.png",
+      video: "",
     },
     {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
+      title: "SiPanen ",
+      href: "",
+      dates: "",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "SiPanen is a modern agricultural platform designed to help farmers improve productivity and profitability. It allows farmers to sell their harvests at competitive prices and purchase seeds or seedlings at the best rates.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "Python",
+        "Flask",
       ],
       links: [
         {
           type: "Website",
-          href: "https://llm.report",
+          href: "",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/sipanen.png",
+      video: "",
     },
     {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
+      title: "Dashboard Engineer RAN",
+      href: "",
+      dates: "",
       active: true,
       description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+        "Designed and developed an interactive data visualization dashboard using Laravel to display and manage user-related network metrics. Improved data accessibility and provided actionable insights for internal decision-making processes.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
+        "Laravel",
+        "JavaScript",
+        "MySQL",
+        "PHP",
         "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        
       ],
       links: [
         {
           type: "Website",
-          href: "https://automatic.chat",
+          href: "",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
+      image: "/dashboard.png",
       video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+        "",
+    },
+    {
+      title: "",
+      href: "",
+      dates: "",
+      active: true,
+      description:
+        "SETARA is a website designed as a university-student-based platform focused on promoting educational equality across Indonesia. The platform connects student volunteers with communities in need, aiming to expand access to quality education.",
+      technologies: [
+        "React.js",
+        "JavaScript",
+        "MySQL",
+        "Express.js",
+        "TailwindCSS",
+        
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/setara.png",
+      video:
+        "",
+    },
+    {
+      title: "Toss & Taste",
+      href: "",
+      dates: "",
+      active: true,
+      description:
+        "Toss & Taste is a modern, visually driven mobile application designed to simplify daily meal preparation and cooking exploration. The application addresses the challenge of meal indecision and recipe management by providing a highly structured and engaging user experience",
+      technologies: [
+        "Dart",
+        "Flutter",
+        "MySQL",
+      ],
+      links: [
+        {
+          type: "Application",
+          href: "",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/toss.png",
+      video:
+        "",
     },
   ],
   hackathons: [

@@ -24,17 +24,9 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Want to chat? Just shoot me a dm{" "}
-          <Link
-            href={DATA.contact.social.X.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-blue-500 hover:underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded-sm"
-          >
-            with a direct question on twitter
-          </Link>{" "}
-          and I&apos;ll respond whenever I can. I will ignore all
-          soliciting.
+          Tertarik untuk berkolaborasi atau mendiskusikan peluang kerja sama? Anda dapat menghubungi saya melalui WhatsApp di{" "}
+<span className="font-medium text-foreground">082276539909</span> atau email ke{" "}
+<span className="font-medium text-foreground">nayakaputra773@gmail.com</span>. 
         </p>
       </div>
     </div>

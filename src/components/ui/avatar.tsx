@@ -26,7 +26,8 @@ const AvatarImage = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AvatarPrimitive.Image
     ref={ref}
-    className={cn("aspect-square h-full w-full", className)}
+    /* Angka persentase dinaikkan ke 35% agar posisi foto terdorong lebih ke atas */
+    className={cn("aspect-square h-full w-full object-cover object-[center_35%]", className)}
     {...props}
   />
 ))
