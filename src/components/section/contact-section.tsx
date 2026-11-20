@@ -24,9 +24,13 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          Tertarik untuk berkolaborasi atau mendiskusikan peluang kerja sama? Anda dapat menghubungi saya melalui WhatsApp di{" "}
-<span className="font-medium text-foreground">082276539909</span> atau email ke{" "}
-<span className="font-medium text-foreground">nayakaputra773@gmail.com</span>. 
+          Interested in collaborating or discussing potential opportunities? Feel free to contact me via WhatsApp at
+
+<span className="font-medium text-foreground">082276539909</span>
+
+or email me at
+
+<span className="font-medium text-foreground">nayakaputra773@gmail.com</span>.
         </p>
       </div>
     </div>
